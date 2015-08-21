@@ -25,4 +25,5 @@ group :development, :test do
   gem 'capybara', github: 'jnicklas/capybara', branch: 'master'
   gem 'awesome_print'
   gem 'factory_girl_rails', '~> 4.0'
+  gem 'guard-livereload', require: false
 end
