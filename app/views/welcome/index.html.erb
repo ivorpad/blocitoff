@@ -1,8 +1,24 @@
-<div class="row">
-  <ul class="nav nav-pills pull-right">
-    <li role="presentation" class="active"><a href="#">Sign up</a></li>
-    <li role="presentation"><a href="#">Sign in</a></li>
-  </ul>
+<div class="container">
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <a href="#" data-dismiss="alert" class="close">×</a>
+        <ul>
+          <li>
+            <%= value %>
+          </li>
+        </ul>
+    </div>
+  <% end %>
+    <ul class="nav nav-pills pull-right">
+
+            <% if current_user %>
+              Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+            <% else %>
+              <%= link_to "Sign In", new_user_session_path %> or
+              <%= link_to "Sign Up", new_user_registration_path %>
+            <% end %>
+    </ul>
+
 </div>
 <row>
   <div class="app-intro jumbotron">
