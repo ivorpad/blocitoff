@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'users/update'
+
+  get 'users/show'
+
+  get 'users/index'
+
   devise_for :users
   get 'welcome/index'
 
