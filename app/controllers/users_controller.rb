@@ -15,13 +15,10 @@ class UsersController < ApplicationController
   def index
   end
 
-  def create
-  end
-
   private
 
-def user_params
-  params.require(:user).permit(:name)
-end
+  def user_params
+    params.require(:user).permit(:name)
+  end
 
 end
