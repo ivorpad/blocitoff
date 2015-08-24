@@ -2,9 +2,15 @@
 <p>Welcome to your user profile</p>
 <% if current_user %>
 <ul class="list-unstyled">
-  <li><b>Name:</b> <%= @user.name %></li>
-  <li><b>Email:</b> <%= @user.email %></li>
-  <li><b>Last sign in:</b> <%= @user.last_sign_in_at %></li>
+  <li>
+    <b>Name:</b>
+    <%= @user.name %></li>
+  <li>
+    <b>Email:</b>
+    <%= @user.email %></li>
+  <li>
+    <b>Last sign in:</b>
+    <%= @user.last_sign_in_at %></li>
 </ul>
 
 <% else %>
