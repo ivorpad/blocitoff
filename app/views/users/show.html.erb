@@ -1,6 +1,9 @@
 <h1>User Profile</h1>
-<p>Welcome to your user profile</p>
 <% if current_user %>
+<p>Welcome to your user profile, <%= @user.name %></p>
+
+
+
 <ul class="list-unstyled">
   <li>
     <b>Name:</b>
@@ -12,6 +15,8 @@
     <b>Last sign in:</b>
     <%= @user.last_sign_in_at %></li>
 </ul>
+
+<%= link_to('Edit user', edit_user_registration_path(current_user)) %>
 
 <% else %>
 
