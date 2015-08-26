@@ -1,9 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
 
-  def new
-  end
-
   def update
     if current_user.update_attributes(user_params)
       flash[:notice] = "Information Updated"
@@ -20,8 +17,7 @@ class UsersController < ApplicationController
     @item = Item.new
   end
 
-  def index
-    @user = User.find(params[:user_id])
+  def new
   end
 
   private
