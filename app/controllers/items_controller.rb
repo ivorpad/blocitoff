@@ -15,6 +15,16 @@ class ItemsController < ApplicationController
       @item = Item.find(params[:id])
   end
 
+  def destroy
+    @item = Item.find(params[:id])
+    if @item.destroy
+      flash[:notice] = "Item deleted"
+      redirect_to :back
+    else
+      flash[:error] = "Couldn't delete item"
+    end
+  end
+
   private
 
   def item_params

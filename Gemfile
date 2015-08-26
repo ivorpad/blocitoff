@@ -22,7 +22,8 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'figaro', '1.0'
-
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara', github: 'jnicklas/capybara', branch: 'master'
   gem 'awesome_print'
