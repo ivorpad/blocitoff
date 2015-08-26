@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'pundit'
+gem 'faker', '~> 1.5.0'
 
 group :development, :test do
   gem 'byebug'

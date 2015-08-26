@@ -6,14 +6,14 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to user_path(@user)
     else
-      redirect_to :back, alert: "Item could not be saved."
+      redirect_to :back
+      flash[:error] = "The item cannot be saved."
     end
   end
 
   def show
       @item = Item.find(params[:id])
   end
-
 
   private
 
