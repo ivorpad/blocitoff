@@ -12,7 +12,6 @@
   user.skip_confirmation!
   user.save
 end
-
 users = User.all
 
 100.times do
