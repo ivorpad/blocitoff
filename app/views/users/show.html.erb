@@ -1,6 +1,6 @@
 <h1>User Profile</h1>
-<p>Welcome to your user profile</p>
 <% if current_user %>
+<p>Welcome to your user profile, <%= @user.name %></p>
 <ul class="list-unstyled">
   <li>
     <b>Name:</b>
@@ -12,11 +12,19 @@
     <b>Last sign in:</b>
     <%= @user.last_sign_in_at %></li>
 </ul>
-
 <% else %>
-
 <p>
   Please sign in to see your information.
 </p>
-
 <% end %>
+
+<div class="row">
+  <div class="col-md-8">
+    <%= render 'items/form' %>
+  </div>
+
+  <div class="col-md-8">
+    <%= render 'items/item' %>
+  </div>
+
+</div>
