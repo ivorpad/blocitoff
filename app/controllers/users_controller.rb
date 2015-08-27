@@ -20,10 +20,6 @@ class UsersController < ApplicationController
     @item = Item.new
   end
 
-  def index
-    @user = User.find(params[:user_id])
-  end
-
   private
 
   def user_params
