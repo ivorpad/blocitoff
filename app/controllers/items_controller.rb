@@ -17,12 +17,19 @@ class ItemsController < ApplicationController
 
   def destroy
     @item = Item.find(params[:id])
+    
     if @item.destroy
       flash[:notice] = "Item deleted"
-      redirect_to :back
+      #redirect_to :back
     else
       flash[:error] = "Couldn't delete item"
     end
+
+    respond_to do |format|
+         format.html
+         format.js
+    end
+
   end
 
   private
