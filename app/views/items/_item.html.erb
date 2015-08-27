@@ -3,7 +3,8 @@
   <% @items.each do |i| %>
     <%= content_tag :li, class: 'list-group-item', id: "item-#{i.id}" do %>
       <%= link_to "", [@user, i], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>
-      <%= i.name %>
+      <%= i.name %> |
+      <small>This todo will be deleted in <%= i.days_left %> days.</small>
     <% end %>
   <% end %>
 </ul>
